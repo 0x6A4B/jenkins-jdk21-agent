@@ -23,7 +23,7 @@ RUN apt-get update && \
 # Package cleanup
     apt-get -qy autoremove && \
 # Add jenkins user
-    adduser --quiet jenkins && \
+    useradd -d /home/jenkins -s /bin/bash jenkins && \
 # Set password for the jenkins user (you may want to alter this).
     echo "jenkins:jenkins" | chpasswd && \
     mkdir /home/jenkins/.m2
