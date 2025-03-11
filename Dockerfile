@@ -7,6 +7,7 @@ RUN apt update && \
     apt -qy full-upgrade && \
     apt install -qy git && \
     apt install -qy wget && \
+    apt install -qy curl && \
 # Install a basic SSH server
     apt install -qy openssh-server && \
     sed -i 's|session    required     pam_loginuid.so|session    optional     pam_loginuid.so|g' /etc/pam.d/sshd && \
